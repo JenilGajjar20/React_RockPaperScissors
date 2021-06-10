@@ -1,38 +1,95 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  min-height: 50vh;
+  background-color: lightgray;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+.choices{
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) inset, 0 1px 0 #fff;
+  padding: 20px 60px;
+  margin: 50px auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.choices h2{
+  font-size: 1.9rem;
+}
+
+.userChoice, 
+.computerChoice{
+  color: orangered;
+}
+
+button{
+  margin: 0 50px;
+  font-size: 20px;
+  border: 2px solid orangered;
+  border-radius: 10px;
+  outline: none;
+  padding: 8px 15px;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.3s ease;
+  transition-property: background-color, color;
+}
+
+button:hover{
+  background-color: orangered;
+  color: #fff;
+}
+
+.result{
+  text-align: center;
+  margin-top: 70px;
+  font-size: 40px;
+}
+
+.win{
+  color: green;
+}
+
+.lose{
+  color: red;
+}
+
+.draw{
+  color: blue;
+}
+
+p{
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 25px 0;
+}
+
+p a{
+  text-decoration: none;
+}
+
+@media (max-width: 590px) {
+  button{
+    margin: 0 30px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 485px) {
+  .choices h2{
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 460px) {
+  button{
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 345px) {
+  button{
+    display: flex;
+    margin-top: 10px;
   }
 }
